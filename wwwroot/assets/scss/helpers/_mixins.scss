@@ -1,0 +1,67 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+// unstyled
+@mixin unstyled($type) {
+   @if $type == button{
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none !important;
+  }
+  @if $type == ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+// no select
+@mixin user-select($value) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+//
+@mixin triangle($size, $color, $direction) {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size / 2;
+  @if $direction == up {
+    border-bottom-color: $color;
+  }
+  @else if $direction == right {
+    border-left-color: $color;
+  }
+  @else if $direction == down {
+    border-top-color: $color;
+  }
+  @else if $direction == left {
+    border-right-color: $color;
+  }
+}
+//
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// font-awesome
+@mixin icon($code) {
+    content: $code;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

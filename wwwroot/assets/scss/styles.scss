@@ -1,0 +1,19 @@
+// helpers
+@import "../scss/helpers/variables";
+@import "../scss/helpers/mixins";
+
+// base
+@import "../scss/base/base";
+
+//components
+@import "../scss/components/navbar";
+@import "../scss/components/owl";
+@import "../scss/components/owl.custom";
+
+// layout
+@import "../scss/layout/main";
+@import "../scss/layout/header";
+@import "../scss/layout/footer";
+
+// pages
+@import "../scss/pages/home";

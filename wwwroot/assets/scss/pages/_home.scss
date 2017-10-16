@@ -1,0 +1,23 @@
+.hero-title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+    a {
+        color: $color-bf;
+        padding-bottom: .5rem;
+
+        &:hover {
+            border-bottom: 2px solid $color-bf;
+        }
+    }
+}
+
+.hero-desc {
+    text-align: center;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto 5rem;
+    font-size: 1.25rem;
+    font-weight: 300;
+}

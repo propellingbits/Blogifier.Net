@@ -1,0 +1,43 @@
+.header {
+    background-color: $color-bf;
+    padding: 4rem 0;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+
+    .navbar-brand {
+        color: #fff;
+        padding: 0;
+        width: 2rem;
+        height: 2.25rem;
+    }
+
+    .navbar-nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+
+    @media screen and (max-width:991px) {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .navbar-dark .navbar-nav .demo-link {
+        margin-left: auto;
+    }
+
+    .navbar-dark .navbar-nav .download-link .nav-link {
+        background: #fff;
+        color: $color-bf !important;
+        border-radius: 3rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-left: 1rem;
+    }
+}

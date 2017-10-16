@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  max-width: $container;
+}
+//
+
+.page {
+  &-title {
+    font-size: 2.5rem;
+    margin: 0 0 5rem;
+    font-weight: 700;
+    color:$color-bf;
+  }
+
+  &-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0 0 1rem;
+    }
+
+    ol,
+    p,
+    ul {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
