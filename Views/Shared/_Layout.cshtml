@@ -1,11 +1,72 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blogifier - A blogging platform</title>
-    <meta name="description" content="Blogifier is simple, beautiful, light-weight open source blog written in .NET Core. It is cross-platform, extendable and customizable web application, that brings all expected from modern blog in small, portable package. By default, it uses file-based SQLite database, scaling up to any Entity-Framework compatible data storage.">
+    <title>Blogifier - @ViewBag.Title</title>
+    @{
+    if (!string.IsNullOrEmpty(ViewBag.Description))
+    {
+    <meta name="description" content="@ViewBag.Description">
+    }
+    else
+    {
+    <meta name="description" content="Full featured and highly customizable cross-platform ASP.NET Core blogging application">
+    }
+    <!-- TWITTER -->
+    
+
+    if (!string.IsNullOrEmpty(ViewBag.TwitterCardType))
+    {
+    <meta name="twitter:card" content="@ViewBag.TwitterCardType">
+    }
+    else
+    {
+    <meta name="twitter:card" content="summary">
+    }
+
+    <meta name="twitter:site" content="@@blogifierdotnet">
+    <meta name="twitter:title" content="Blogifier - @ViewBag.Title">
+    if (!string.IsNullOrEmpty(ViewBag.Description))
+    {
+    <meta name="twitter:description" content="@ViewBag.Description">
+    }
+    else
+    {
+    <meta name="twitter:description" content="Full featured and highly customizable cross-platform ASP.NET Core blogging application">
+    }
+    if (!string.IsNullOrEmpty(ViewBag.Image))
+    {
+    <meta name="twitter:image" content="@ViewBag.Image">
+    }
+    else
+    {
+    <meta name="twitter:image" content="/assets/img/image.png">
+    }
+    <!-- FACEBOOK -->
+    <meta property="og:title" content="Blogifier - @ViewBag.Title">
+    <meta property="og:type" content="website">
+    if (!string.IsNullOrEmpty(ViewBag.Description))
+    {
+    <meta property="og:description" content="@ViewBag.Description">
+    }
+    else
+    {
+    <meta property="og:description" content="Full featured and highly customizable cross-platform ASP.NET Core blogging application">
+    }
+
+    if (!string.IsNullOrEmpty(ViewBag.Image))
+    {
+    <meta property="og:image" content="@ViewBag.Image">
+    }
+    else
+    {
+    <meta property="og:image" content="/assets/img/image.png">
+    }
+    }
+    <!-- ASSETS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/assets/css/font-awesome.min.css" rel="stylesheet">
